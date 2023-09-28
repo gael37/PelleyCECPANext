@@ -1,0 +1,27 @@
+.sectionFooter {
+  width: 100%;
+  background: #215F4A;
+  margin-top: auto;
+}
+
+.sectionFooter a {
+  color: #fff;
+  /* font-size: .75em; */
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.sectionFooter span {
+  color: #fff;
+  /* font-size: .75em; */
+  text-decoration: none;
+}
+
+.sectionFooter a:hover {
+  text-decoration: underline;
+}
+
+.sectionFooter p {
+  color: #fff;
+  /* font-size: .5em; */
+}
