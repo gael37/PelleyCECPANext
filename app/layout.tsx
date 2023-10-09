@@ -1,7 +1,28 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { Oswald, Roboto } from 'next/font/google'
+import localFont from 'next/font/local'
 import Footer from './components/Footer/Footer'
+import NavBar from './NavBar'
+import AuthProvider from './auth/Provider'
+import GoogleAnalyticsScript from './GoogleAnalyticsScript'
 
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '900'],
+  variable: '--font-roboto'
+})
+
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  variable: '--font-oswald'
+})
+
+const poppins = localFont({
+  src: '../public/fonts/poppins-regular-webfont.woff2',
+  variable: '--font-poppins'
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,9 +36,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='flex flex-col min-h-screen p-10'>
-        <main className='mb-20'>{children}</main>
-        <Footer />
+      <GoogleAnalyticsScript />
+      <body className={poppins.variable + ' ' + 'flex flex-col min-h-screen p-10'}>
+        <AuthProvider>
+          <NavBar />
+          <main className='mb-20'>{children}</main>
+          <Footer />
+        </AuthProvider>
       </body>
     </html >
   )

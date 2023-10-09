@@ -5,3 +5,9 @@
 body {
   background-color: white;
 }
+
+@layer base {
+  h1 {
+    @apply font-bold text-3xl text-black my-10 font-poppins
+  }
+}

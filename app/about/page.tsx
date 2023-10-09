@@ -1,12 +1,12 @@
 import React from 'react'
-import AboutComponent from '../components/AboutComponent/AboutComponent'
+import About from './About'
 
-const About = () => {
+const AboutPage = () => {
   return (
     <main>
-      <AboutComponent />
+      <About />
     </main>
   )
 }
 
-export default About
+export default AboutPage

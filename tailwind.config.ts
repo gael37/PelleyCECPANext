@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: 'var(--font-poppins)',
+        roboto: 'var(--font-roboto)',
+        oswald: 'var(--font-oswald)'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
